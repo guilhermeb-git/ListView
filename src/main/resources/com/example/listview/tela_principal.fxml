@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.listview.TarefaController">
+    <top>
+        <Label fx:id="lblRelogio" text="00/00/0000 00:00:00" style="-fx-font-size: 16px; -fx-padding: 10px;"/>
+    </top>
+
+    <center>
+        <TableView fx:id="tableView">
+            <columns>
+                <TableColumn fx:id="colTitulo" text="Título" prefWidth="150"/>
+                <TableColumn fx:id="colDescricao" text="Descrição" prefWidth="200"/>
+                <TableColumn fx:id="colDataEntrega" text="Data de Entrega" prefWidth="120"/>
+                <TableColumn fx:id="colStatus" text="Status" prefWidth="100"/>
+            </columns>
+        </TableView>
+    </center>
+
+    <bottom>
+        <HBox spacing="10" alignment="center">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <Button text="Adicionar" onAction="#adicionarTarefa"/>
+            <Button text="Editar" onAction="#editarTarefa"/>
+            <Button text="Excluir" onAction="#excluirTarefa"/>
+            <Button text="Atualizar" onAction="#atualizarLista"/>
+        </HBox>
+    </bottom>
+
+</BorderPane>
